@@ -33,6 +33,12 @@ export class MessageComponent {
     }
 
     onDelete() {
-        this.messageService.deleteMessage(this.message);
+        this.messageService.deleteMessageFromDb(this.message)
+            .subscribe(
+                result => {
+                    console.log(result);
+                    this.messageService.deleteMessageHere(this.message)
+                }
+            );
     }
 }
