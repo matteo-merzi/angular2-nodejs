@@ -11,8 +11,9 @@ export class MessageService {
     private messages: Message[] = [];
     messageIsEdit = new EventEmitter<Message>();
     testUrl: string = 'http://localhost:3000/';
-    prodUrl: string = 'https://angular2-messages-app.herokuapp.com/';
-    finalUrl: string = this.prodUrl;
+    herokuUrl: string = 'https://angular2-messages-app.herokuapp.com/';
+    awsUrl: string = 'http://sample-env-1.immuypcque.eu-central-1.elasticbeanstalk.com/'
+    finalUrl: string = this.herokuUrl;
 
     constructor(private http: Http, private errorService: ErrorService) {
     }
