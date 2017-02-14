@@ -36,3 +36,4 @@ public/\.DS_Store
 \.DS_Store
 
 \.idea/
+!/public/js/app/
